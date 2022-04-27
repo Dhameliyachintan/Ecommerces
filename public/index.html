@@ -15,6 +15,14 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/style.css" class="text/css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/all.min.css" class="text/css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/font.css" class="text/css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/bootstrap.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/bootstrap.css" class="text/css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/media.css" class="text/css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/slick.css" class="text/css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/html/css/slick-theme.css" class="text/css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -39,5 +47,147 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="%PUBLIC_URL%/html/js/jquery.min.js"></script>
+    <script src="%PUBLIC_URL%/html/js/bootstrap.bundle.min.js"></script>
+    <script src="%PUBLIC_URL%/html/js/slick.js"></script>
+    <script>
+        $('.responsive').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            autoplay: 1000,
+            arrows: false,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
+        });
+    </script>
+    <script>
+        $('.slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: 1000,
+            arrows: false,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
+        });
+    </script>
+    <script>
+        $('.sliders').slick({
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            autoplay: 1000,
+            arrows: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
+        });
+    </script>
+
+    <script>
+        $('.lmages').slick({
+            infinite: true,
+            speed: 300,
+            slidesToShow: 8,
+            slidesToScroll: 8,
+            autoplay: 1000,
+            arrows: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
+        });
+    </script>
   </body>
 </html>
