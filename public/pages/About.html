@@ -252,7 +252,7 @@
             <div class="about-text text-center text-dark">
                 <h1 class="mb-5 fw-bold">Leadership Expart Team</h1>
             </div>
-            <div class="row responsive">
+            <div class="row team">
                 <div class="col-lg-3">
                     <div class="team-image text-center mx-3">
                         <div class="team-images">
@@ -422,7 +422,7 @@
             <div class="about-text text-center text-dark">
                 <h1 class="fw-bold mb-5">@Aytor Instagram</h1>
             </div>
-            <div class="row slider">
+            <div class="row aytor">
                 <div class="Aytor-image">
                     <img src="image/insta_2.jpg" alt="" class="img-fluid">
                 </div>
@@ -526,41 +526,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.js"></script>
-    <script>
-        $('.responsive').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            autoplay: 1000,
-            arrows: false,
-            responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-            ]
-        });
-    </script>
+    
 
     <script>
         $('.multiple-items').slick({
@@ -580,12 +546,48 @@
 <!---------------------Aytor-img--------------------->
 
 <script>
-    $('.slider').slick({
+    $('.aytor').slick({
         dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 6,
         slidesToScroll: 6,
+        autoplay: 1000,
+        arrows: false,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+</script>
+
+<script>
+    $('.team').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         autoplay: 1000,
         arrows: false,
         responsive: [{
