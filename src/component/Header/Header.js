@@ -32,7 +32,8 @@ function Header(props) {
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="Pages.html">Pages<i className="fa fa-angle-down ms-2"
                                         aria-hidden="true"></i></a> */}
-                                        {/* <NavLink exact to={"/Pages"} ClassName="nav-link scrollto active">Pages</NavLink> */}
+                                        <NavLink exact to={"/Cardpage"} ClassName="nav-link scrollto active">Cardpage <i
+                                        className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                         
                                 </li>
                                 <li className="nav-item">
@@ -51,6 +52,11 @@ function Header(props) {
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="Contact.html">Contact</a> */}
                                     <NavLink exact to={"/Contact"} ClassName="nav-link scrollto active">Contact <i
+                                        className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    {/* <a className="nav-link text-dark" href="Contact.html">Contact</a> */}
+                                    <NavLink exact to={"/Product"} ClassName="nav-link scrollto active">Product<i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                             </ul>
