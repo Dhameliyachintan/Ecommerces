@@ -11,33 +11,41 @@ import Products from './component/Slider/Products';
 import Shoes from './component/Slider/Shoes';
 import Customer from './component/Slider/Custmoer';
 import Images from './component/Slider/Images';
-import Avater from './component/Slider/Avater';
+// import Avater from './compnonent/Slider/Avater';
 import Team from './component/Slider/Team';
 import Logo from './component/Slider/Logo';
 import Cardpage from './container/Cardpage/Cardpage';
 import Product from './container/Product';
+import { ThemeProvider } from './context/ThemeContext';
+// import { ThemeProvider } from './container/context/ThemeContext';
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Switch>
-        <Route exact path={"/Home"} component={Home} />
-        <Route exact path={"/About"} component={About} />
-        <Route exact path={"/Blog"} component={Blog} />
-        <Route exact path={"/Shope"} component={Shope} />
-        <Route exact path={"/Cardpage"} component={Cardpage} />
-        <Route exact path={"/Product"} component={Product} />
-        {/* <Products /> */}
-        {/* <Shoes /> */}
-        {/* <Customer /> */}
-        {/* <Avater /> */}
-        {/* <Logo/> */}
-        {/* <Images /> */}
-        {/* <Team /> */}
-      </Switch>
-      <Footer />
+      <ThemeProvider>
+
+        <Header />
+        <Switch>
+          <Route exact path={"/Home"} component={Home} />
+          <Route exact path={"/About"} component={About} />
+          <Route exact path={"/Blog"} component={Blog} />
+          <Route exact path={"/Shope"} component={Shope} />
+          <Route exact path={"/Cardpage"} component={Cardpage} />
+          <Route exact path={"/Product"} component={Product} />
+          {/* <Products /> */}
+          {/* <Shoes /> */}
+          {/* <Customer /> */}
+          {/* <Avater /> */}
+          {/* <Logo/> */}
+          {/* <Images /> */}
+          {/* <Team /> */}
+        </Switch>
+        <Footer />
+
+      </ThemeProvider>
     </div>
   );
 }

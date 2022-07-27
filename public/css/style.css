@@ -7,6 +7,16 @@ li {
   list-style: none;
 }
 
+.light {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.dark {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
 /*===========================mixin===========================*/
 /*===========================commen-css===========================*/
 a {
@@ -310,11 +320,13 @@ a {
     transform: scale(0.95);
     opacity: 0.75;
   }
+
   100% {
     transform: scale(1.35);
     opacity: 0;
   }
 }
+
 .mega-hover {
   overflow: hidden;
 }
@@ -490,7 +502,8 @@ footer {
   padding-top: 80px;
 }
 
-.contact a, .Account a {
+.contact a,
+.Account a {
   text-decoration: none;
 }
 

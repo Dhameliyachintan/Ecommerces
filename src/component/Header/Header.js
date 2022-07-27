@@ -1,15 +1,26 @@
-import React from 'react';
+
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import ThemeContext from '../../context/ThemeContext';
+// import ThemeContext from '../../container/context/ThemeContext';
+
+
 
 function Header(props) {
+
+    const theme = useContext(ThemeContext)
+    console.log(theme);
+
     return (
         <>
+        
             <header className="theam-color">
-                <nav className="navbar navbar-expand-lg">
+                <nav className={`navbar navbar-expand-lg ${theme.theme}`}>
                     <div className="container">
                         <a className="navbar-brand" href="#">
                             <img src="image/logo.svg" alt className="img-fluid" />
                         </a>
+                        <button onClick={() => theme.toggle_theme(theme.theme)}>change Theme</button>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                             <i className="fa-solid fa-grip-lines fs-3 text-dark"></i>
                         </button>
@@ -51,7 +62,7 @@ function Header(props) {
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="Contact.html">Contact</a> */}
-                                    <NavLink exact to={"/Contact"} ClassName="nav-link scrollto active">Contact <i
+                                    <NavLink exact to={"/Login"} ClassName="nav-link scrollto active">Login<i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                                 <li className="nav-item">
@@ -60,6 +71,10 @@ function Header(props) {
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                             </ul>
+                            
+
+
+
                             <div className="social-icon d-flex">
                                 <a href="#"><i className="fa fa-search text-dark px-2" aria-hidden="true"></i></a>
                                 <a href="#"><i className="fa fa-user text-dark px-2" aria-hidden="true"></i></a>

@@ -49,6 +49,8 @@ const ShoppingCard = ({ i }) => {
                     <Button className="control__btn" onClick={decrementCounter}>-</Button>
                 </CardBody>
             </Card>
+
+            
          
         </div>
     )

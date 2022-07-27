@@ -1,4 +1,5 @@
 import React from 'react';
+// import Number from '../../component/Slider/number';
 
 function Blog(props) {
     return (

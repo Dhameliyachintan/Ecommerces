@@ -17,3 +17,19 @@ code {
   margin-right: 30px;
   color: #000;
 }
+
+input.form-control {
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-top: 15px;
+}
+
+.php-email-form {
+  margin: auto;
+}
+
+button.btn {
+  border: 1px solid #000;
+  margin-top: 15px;
+}
