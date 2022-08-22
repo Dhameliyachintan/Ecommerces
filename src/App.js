@@ -17,7 +17,11 @@ import Logo from './component/Slider/Logo';
 import Cardpage from './container/Cardpage/Cardpage';
 import Product from './container/Product';
 import { ThemeProvider } from './context/ThemeContext';
-// import { ThemeProvider } from './container/context/ThemeContext';
+import PublicRoute from './container/Route/PublicRoute';
+import PrivateRoute from './container/Route/PrivateRoute';
+import Login from './container/Login';
+import { store } from './Redux/Store';
+import { Provider } from 'react-redux';
 
 
 
@@ -25,27 +29,29 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <div className="App">
-      <ThemeProvider>
+      <Provider store = {store}>
+        <ThemeProvider>
+          <Header />
+          <Switch>
+            <PublicRoute exact path={"/Home"} component={Home} />
+            <PublicRoute exact path={"/About"} component={About} />
+            <PublicRoute exact path={"/Blog"} component={Blog} />
+            <PublicRoute exact path={"/Shope"} component={Shope} />
+            <PublicRoute exact path={"/Cardpage"} component={Cardpage} />
+            <PrivateRoute exact path={"/Product"} component={Product} />
+            <PublicRoute restricted={false} exact path={"/Login"} component={Login} />
+            {/* <Products /> */}
+            {/* <Shoes /> */}
+            {/* <Customer /> */}
+            {/* <Avater /> */}
+            {/* <Logo/> */}
+            {/* <Images /> */}
+            {/* <Team /> */}
+          </Switch>
+          <Footer />
 
-        <Header />
-        <Switch>
-          <Route exact path={"/Home"} component={Home} />
-          <Route exact path={"/About"} component={About} />
-          <Route exact path={"/Blog"} component={Blog} />
-          <Route exact path={"/Shope"} component={Shope} />
-          <Route exact path={"/Cardpage"} component={Cardpage} />
-          <Route exact path={"/Product"} component={Product} />
-          {/* <Products /> */}
-          {/* <Shoes /> */}
-          {/* <Customer /> */}
-          {/* <Avater /> */}
-          {/* <Logo/> */}
-          {/* <Images /> */}
-          {/* <Team /> */}
-        </Switch>
-        <Footer />
-
-      </ThemeProvider>
+        </ThemeProvider>
+      </Provider>
     </div>
   );
 }

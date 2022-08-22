@@ -13,3 +13,7 @@ export const ThemeReducer = (state, action) => {
             return state
     }
 }
+
+
+
+export default ThemeReducer;

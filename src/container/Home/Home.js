@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Products from '../../component/Slider/Products';
 import Shoes from '../../component/Slider/Shoes';
 import Customer from '../../component/Slider/Custmoer';
@@ -6,6 +6,7 @@ import Images from '../../component/Slider/Images';
 import Logo from '../../component/Slider/Logo';
 
 function Home(props) {
+
     return (
         // < !------------------banner-------------->
         <div>

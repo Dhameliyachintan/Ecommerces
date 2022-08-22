@@ -2,18 +2,19 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import ThemeContext from '../../context/ThemeContext';
-// import ThemeContext from '../../container/context/ThemeContext';
 
 
 
 function Header(props) {
+
+    // const theme = useContext(ThemeContext)
+    // console.log(theme);
 
     const theme = useContext(ThemeContext)
     console.log(theme);
 
     return (
         <>
-        
             <header className="theam-color">
                 <nav className={`navbar navbar-expand-lg ${theme.theme}`}>
                     <div className="container">
@@ -62,12 +63,12 @@ function Header(props) {
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="Contact.html">Contact</a> */}
-                                    <NavLink exact to={"/Login"} ClassName="nav-link scrollto active">Login<i
+                                    <NavLink exact to={"/Product"} ClassName="nav-link scrollto active">Product<i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    {/* <a className="nav-link text-dark" href="Contact.html">Contact</a> */}
-                                    <NavLink exact to={"/Product"} ClassName="nav-link scrollto active">Product<i
+                                    {/* <a className="nav-link text-dark" href="Contact.html">Login</a> */}
+                                    <NavLink exact to={"/Login"} ClassName="nav-link scrollto">Login<i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                             </ul>
