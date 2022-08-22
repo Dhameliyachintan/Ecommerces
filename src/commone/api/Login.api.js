@@ -22,7 +22,7 @@ export const SignAPI = (data) => {
             .then((emailverified) => {
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
-                        if (user.emailverified) {
+                        if (user.emailVerified) {
                             console.log("Login sucessfull");
                         } else {
                             console.log("Please verify email");
