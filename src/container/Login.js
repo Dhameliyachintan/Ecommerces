@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as yup from 'yup';
 import { Form, Formik, useFormik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { LoginAction, signupAction } from '../Redux/Action/auth.Action';
+import { googleActionLogin, LoginAction, signupAction } from '../Redux/Action/auth.Action';
 // import { signupAction } from '../Redux/Action/auth.action';
 
 function Login(props) {
@@ -50,6 +50,10 @@ function Login(props) {
 
     const handlepassword = (values) => {
         alert(JSON.stringify(values.email));
+    }
+
+    const handleActionlogin = (values) => {
+        dispatch(googleActionLogin())
     }
 
 
@@ -126,7 +130,7 @@ function Login(props) {
                                                 onBlur={formik.handleBlur}
                                             />
                                             {
-                                               formik.errors.name && formik.touched.name ? <p>{formik.errors.name}</p> : ''
+                                                formik.errors.name && formik.touched.name ? <p>{formik.errors.name}</p> : ''
                                             }
 
                                             <div className="validate" />
@@ -202,6 +206,11 @@ function Login(props) {
                                                 <button onClick={() => { setUserType('Login') }} >Login</button>
                                             </div>
                                 }
+                                <div className='text-center'>
+                                    <button onClick={() => handleActionlogin()} className="button-google">
+                                        <img src="image/google.png" alt="" width="40" /> Sign up google
+                                    </button>
+                                </div>
                             </div>
                         </Form>
                     </Formik>

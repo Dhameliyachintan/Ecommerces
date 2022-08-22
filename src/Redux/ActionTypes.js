@@ -15,4 +15,5 @@ export const LOGGED_USER = "LOGGED_USER"
 export const LOGOUT_USER = "LOGOUT_USER"
 export const LOGGIN_USER = "LOGGIN_USER"
 
-
+// googleLogin
+export const GOOGLE_LOGIN = "GOOGLE_LOGIN"
