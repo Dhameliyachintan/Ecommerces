@@ -34,3 +34,7 @@ export const Logginuser = () => (dispatch) => {
 export const googleActionLogin = () => (dispatch) => {
     dispatch({type : ActionTypes.GOOGLE_LOGIN})
 }
+
+export const forgetpaswordAction = (data) => (dispatch) => {
+    dispatch({type : ActionTypes.FORGET_PASSWORD, payload : data})
+}

@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../../Firebase"
 import { GoogleAuthProvider } from "firebase/auth";
 
@@ -78,7 +78,6 @@ export const LoginApI = (data) => {
     })
 }
 
-
 export const LogoutAPI = (data) => {
     console.log(data);
     return new Promise((resolve, reject) => {
@@ -114,5 +113,20 @@ export const googleLoginAPI = () => {
                 // ...
                 reject({ payload: errorCode })
             });
+    })
+}
+
+export const ForgetpasswordAPI = (data) => {
+    return new Promise((resolve, reject) => {
+        sendPasswordResetEmail(auth, data.email)
+            .then((user) => {
+                resolve({ payload: "Please check verify email" })
+            }).catch((error) => {
+                const errorCode = error.code;
+                
+                if (error.code.localeCompare("auth/user-not-found"))
+                    reject({ payload: "Please ragistred email" })
+                reject({ payload: error.code })
+            })
     })
 }

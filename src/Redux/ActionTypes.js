@@ -17,3 +17,4 @@ export const LOGGIN_USER = "LOGGIN_USER"
 
 // googleLogin
 export const GOOGLE_LOGIN = "GOOGLE_LOGIN"
+export const FORGET_PASSWORD = "FORGET_PASSWORD"

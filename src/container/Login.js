@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as yup from 'yup';
 import { Form, Formik, useFormik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { googleActionLogin, LoginAction, signupAction } from '../Redux/Action/auth.Action';
+import { forgetpaswordAction, googleActionLogin, LoginAction, signupAction } from '../Redux/Action/auth.Action';
 // import { signupAction } from '../Redux/Action/auth.action';
 
 function Login(props) {
@@ -49,7 +49,8 @@ function Login(props) {
 
 
     const handlepassword = (values) => {
-        alert(JSON.stringify(values.email));
+        // alert(JSON.stringify(values.email));
+        dispatch(forgetpaswordAction(values))
     }
 
     const handleActionlogin = (values) => {
