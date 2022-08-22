@@ -9,7 +9,7 @@ export const emailverify = (user) => (dispatch) => {
 }
 
 
-// Login
+// Login/ home page push
 
 export const LoginAction = (user) => (dispatch) => {
     dispatch({type : ActionTypes.LOGIN_USER, payload : user})
