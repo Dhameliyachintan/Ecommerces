@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import ThemeContext from '../../context/ThemeContext';
+import Alert from '../Alert/Alert';
 
 
 
@@ -31,35 +32,35 @@ function Header(props) {
                                     {/* <a className="nav-link text-dark" aria-current="page" href="Home.html">Home<i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i>
                                     </a> */}
-                                        <NavLink exact to={"/Home"} ClassName="nav-link scrollto active">Home <i
+                                    <NavLink exact to={"/Home"} ClassName="nav-link scrollto active">Home <i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
 
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="About.html">About <i className="fa fa-angle-down ms-2"
                                         aria-hidden="true"></i></a> */}
-                                        <NavLink exact to={"/About"} ClassName="nav-link scrollto active">About <i
+                                    <NavLink exact to={"/About"} ClassName="nav-link scrollto active">About <i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="Pages.html">Pages<i className="fa fa-angle-down ms-2"
                                         aria-hidden="true"></i></a> */}
-                                        <NavLink exact to={"/Cardpage"} ClassName="nav-link scrollto active">Cardpage <i
+                                    <NavLink exact to={"/Cardpage"} ClassName="nav-link scrollto active">Cardpage <i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
-                                        
+
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="shope.html">Shop<i className="fa fa-angle-down ms-2"
                                         aria-hidden="true"></i></a> */}
-                                        <NavLink exact to={"/Shope"} ClassName="nav-link scrollto active">Shop <i
+                                    <NavLink exact to={"/Shope"} ClassName="nav-link scrollto active">Shop <i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="blog.html">Blog<i className="fa fa-angle-down ms-2"
                                         aria-hidden="true"></i></a> */}
-                                        <NavLink exact to={"/Blog"} ClassName="nav-link scrollto active">Blog <i
+                                    <NavLink exact to={"/Blog"} ClassName="nav-link scrollto active">Blog <i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
-                                        
+
                                 </li>
                                 <li className="nav-item">
                                     {/* <a className="nav-link text-dark" href="Contact.html">Contact</a> */}
@@ -72,7 +73,7 @@ function Header(props) {
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
                             </ul>
-                            
+
 
 
 
@@ -86,6 +87,7 @@ function Header(props) {
                     </div>
                 </nav>
             </header>
+            <Alert />
         </>
 
 

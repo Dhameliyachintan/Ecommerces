@@ -22,6 +22,7 @@ import PrivateRoute from './container/Route/PrivateRoute';
 import Login from './container/Login';
 import { store } from './Redux/Store';
 import { Provider } from 'react-redux';
+import { SnackbarProvider } from 'notistack';
 
 
 
@@ -29,29 +30,31 @@ import { Provider } from 'react-redux';
 function App() {
   return (
     <div className="App">
-      <Provider store = {store}>
-        <ThemeProvider>
-          <Header />
-          <Switch>
-            <PublicRoute exact path={"/Home"} component={Home} />
-            <PublicRoute exact path={"/About"} component={About} />
-            <PublicRoute exact path={"/Blog"} component={Blog} />
-            <PublicRoute exact path={"/Shope"} component={Shope} />
-            <PublicRoute exact path={"/Cardpage"} component={Cardpage} />
-            <PrivateRoute exact path={"/Product"} component={Product} />
-            <PublicRoute restricted={false} exact path={"/Login"} component={Login} />
-            {/* <Products /> */}
-            {/* <Shoes /> */}
-            {/* <Customer /> */}
-            {/* <Avater /> */}
-            {/* <Logo/> */}
-            {/* <Images /> */}
-            {/* <Team /> */}
-          </Switch>
-          <Footer />
+      <SnackbarProvider maxSnack={3}>
+        <Provider store={store}>
+          <ThemeProvider>
+            <Header />
+            <Switch>
+              <PublicRoute exact path={"/Home"} component={Home} />
+              <PublicRoute exact path={"/About"} component={About} />
+              <PublicRoute exact path={"/Blog"} component={Blog} />
+              <PublicRoute exact path={"/Shope"} component={Shope} />
+              <PublicRoute exact path={"/Cardpage"} component={Cardpage} />
+              <PrivateRoute exact path={"/Product"} component={Product} />
+              <PublicRoute restricted={false} exact path={"/Login"} component={Login} />
+              {/* <Products /> */}
+              {/* <Shoes /> */}
+              {/* <Customer /> */}
+              {/* <Avater /> */}
+              {/* <Logo/> */}
+              {/* <Images /> */}
+              {/* <Team /> */}
+            </Switch>
+            <Footer />
 
-        </ThemeProvider>
-      </Provider>
+          </ThemeProvider>
+        </Provider>
+      </SnackbarProvider>
     </div>
   );
 }

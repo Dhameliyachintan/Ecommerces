@@ -23,12 +23,14 @@ export const SignAPI = (data) => {
                 onAuthStateChanged(auth, (user) => {
                     if (user) {
                         if (user.emailverified) {
-                            console.log("Login sucessfull");
+                            // console.log("Login sucessfull");
+                            resolve({ payload: "Login sucessfull" });
                         } else {
-                            console.log("Please verify email");
+                            // console.log("Please verify email");
+                            resolve({ payload: "Please verify email" });
                         }
                     } else {
-                        console.log("wrong verify");
+                        reject("wrong verify");
                     }
                 })
             })
@@ -37,11 +39,13 @@ export const SignAPI = (data) => {
                 const errorMessage = error.message;
 
                 if (errorCode.localeCompare("auth/already email-use")) {
-                    console.log("email already ragistred");
+                    // console.log("email already ragistred");
+                    reject({ payload: "email already ragistred" });
                 } else {
-                    console.log(error.code);
+                    // console.log(error.code);
+                    reject({ payload: errorCode });
                 }
-             
+
             });
 
 
