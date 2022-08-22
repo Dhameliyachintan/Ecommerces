@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as yup from 'yup';
 import { Form, Formik, useFormik } from 'formik';
 import { useDispatch } from 'react-redux';
-import { signupAction } from '../Redux/Action/auth.Action';
+import { LoginAction, signupAction } from '../Redux/Action/auth.Action';
 // import { signupAction } from '../Redux/Action/auth.action';
 
 function Login(props) {
@@ -15,6 +15,7 @@ function Login(props) {
     const handleLogin = (values) => {
         // alert(JSON.stringify(values, null, 2));
         sessionStorage.setItem("user", "1234567")
+        dispatch(LoginAction(values))
 
     }
     const handlesignup = (values) => {

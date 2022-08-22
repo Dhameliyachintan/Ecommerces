@@ -35,7 +35,7 @@ function App() {
           <ThemeProvider>
             <Header />
             <Switch>
-              <PublicRoute exact path={"/Home"} component={Home} />
+              <PublicRoute exact path={"/"} component={Home} />
               <PublicRoute exact path={"/About"} component={About} />
               <PublicRoute exact path={"/Blog"} component={Blog} />
               <PublicRoute exact path={"/Shope"} component={Shope} />

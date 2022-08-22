@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../Firebase"
 
 
@@ -49,5 +49,30 @@ export const SignAPI = (data) => {
             });
 
 
+    })
+}
+
+export const LoginApI = (data) => {
+    console.log(data);
+    return new Promise((resolve, reject) => {
+        signInWithEmailAndPassword(auth, data.email, data.password)
+            .then((user) => {
+                if (user.user.emailVerified) {
+                    resolve({ payload: user.user });
+                } else {
+                    reject({ payload: "Please verify email" })
+                }
+            }).catch((error) => {
+
+                if (error.code.localeCompare("auth/wrong password")) {
+                    reject({ payload: "wrong email or password" })
+                }
+                else if (error.code.localeCompare("auth/user-not-found")) {
+                    reject({ payload: "ragistred email" })
+                }
+                else {
+                    reject({ payload: error.code })
+                }
+            })
     })
 }
