@@ -7,8 +7,12 @@ export const EMAILVERIFY_USER = "EMAILVERIFY_USER"
 export const SET_ALERT = "SET_ALERT"
 export const RESET_ALERT = "RESET_ALERT"
 
-// Login
+// Login / Home page push
 export const LOGIN_USER = "LOGIN_USER"
-export const LOGGED_USER = "LOGGED_USER"
+export const LOGGED_USER = "LOGGED_USER" 
+
+// Logout 
+export const LOGOUT_USER = "LOGOUT_USER"
+export const LOGGIN_USER = "LOGGIN_USER"
 
 

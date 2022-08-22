@@ -157,7 +157,7 @@ a {
 .collection-text {
     @include after();
     top: 10%;
-    left: 25%;
+    left: 0;
     z-index: 2;
 }
 

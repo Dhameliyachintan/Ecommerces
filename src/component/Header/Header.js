@@ -1,18 +1,27 @@
 
 import React, { useContext } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import ThemeContext from '../../context/ThemeContext';
+import { Logoutuser } from '../../Redux/Action/auth.Action';
 import Alert from '../Alert/Alert';
 
 
 
 function Header(props) {
 
-    // const theme = useContext(ThemeContext)
-    // console.log(theme);
-
     const theme = useContext(ThemeContext)
     console.log(theme);
+
+    const auth = useSelector(state => state.auth)
+    console.log(auth);
+
+    const dispatch = useDispatch()
+
+    const handleLogout = () => {
+        dispatch(Logoutuser())
+        console.log("Logoutuser");
+    }
 
     return (
         <>
@@ -67,11 +76,17 @@ function Header(props) {
                                     <NavLink exact to={"/Product"} ClassName="nav-link scrollto active">Product<i
                                         className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
                                 </li>
-                                <li className="nav-item">
-                                    {/* <a className="nav-link text-dark" href="Contact.html">Login</a> */}
-                                    <NavLink exact to={"/Login"} ClassName="nav-link scrollto">Login<i
-                                        className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
-                                </li>
+                                {
+                                    auth.user === null ?
+                                        <li className="nav-item">
+                                            <NavLink exact to={"/Login"} ClassName="nav-link scrollto">Login<i
+                                                className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
+                                        </li> :
+                                        <li className="nav-item">
+                                            <NavLink onClick={() => handleLogout()} exact to={"/Login"} ClassName="nav-link scrollto">Logout<i
+                                                className="fa fa-angle-down ms-2" aria-hidden="true"></i></NavLink>
+                                        </li>
+                                }
                             </ul>
 
 
@@ -88,6 +103,7 @@ function Header(props) {
                 </nav>
             </header>
             <Alert />
+
         </>
 
 
